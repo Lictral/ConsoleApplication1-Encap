@@ -3,11 +3,20 @@
 
 #include <iostream>
 #include <vector>
+#include "\Users\lguillermont\source\repos\ConsoleApplication1 Encap/TEST.h"
+#include "\Users\lguillermont\source\repos\ConsoleApplication1 Encap/test.cpp"
 using namespace std;
+/*
+void addOnep(int* pa) {
+	*pa += 1;
+}
 
-
+void addOne(int& b) {
+	b += 1;
+}
+*/
 int main(int argc, const char* argv[]) {
-	
+	/*
 	vector<string> strArray;
 	
 	cout << "Hello, World" << endl;
@@ -15,29 +24,27 @@ int main(int argc, const char* argv[]) {
 	string str;
 	//string word = "toto";
 	
-	while (1)
-	{
-		cout << "moi je moi je " << endl; // balec
-		cin >> str; // input into std (std = input donc mot) cin = input
-		strArray.push_back(str); // append in list
-		for (int i = 0; i < strArray.size(); i++) // boucle
-			cout << strArray[i] << "\n";
-		
-	}
-		
 
+	int a = 1;
+	int b = 1;
+
+	addOnep(&a);
+	addOne(b);
+
+	cout << a << endl;
+	cout << b << endl;
+	*/
+	
+	Point point;
+	point.x = 0.1f;
+	point.y = 7.2f;
+	point.z = 3.4f;
+
+	cout << point.ToString();
+
+	
 	return 0;
+
+
 }
 
-
-
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
-// Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
-
-// Astuces pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
