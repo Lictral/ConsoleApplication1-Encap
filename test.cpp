@@ -3,10 +3,11 @@
 #include <sstream>
 using namespace std;
 
+
 std::string Point::ToString() {
 	std::stringstream stream;
 	
-	stream << "Point: x:" << x << "y:" << y << "z:" << z;
+	stream << "Point: \nx: " << x << " \ny: " << y << "\nz: " << z;
 	
 	return stream.str();
 
