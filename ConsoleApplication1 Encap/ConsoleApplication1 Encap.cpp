@@ -9,6 +9,7 @@
 #include "\Users\lguillermont\source\repos\ConsoleApplication1 Encap/entite.cpp"
 #include "Entite2.h"
 #include "Abstraite.h"
+#include "Alive.h"
 
 using namespace std;
 /*
@@ -59,7 +60,7 @@ int main(int argc, const char* argv[]) {
 	entite2.SetPos(4.31, 15.96);
 	cout << entite2.ToString();
 	*/
-
+	/*
 	Vector2 vec2;
 	Abstraite abs(vec2, 0);
 	abs.SetSpeed(5);
@@ -69,7 +70,15 @@ int main(int argc, const char* argv[]) {
 
 	abs.Deplacer(new_direction);
 	cout << abs.ToString() << endl;
-		
+	*/
+
+	Alive alive(5);
+	alive.SetHpm(10);
+	alive.SetHp(2);
+	alive.Damage(5);
+
+	cout << alive.hp << endl;
+
 
 	return 0;
 }
