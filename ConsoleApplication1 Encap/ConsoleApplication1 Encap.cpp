@@ -8,6 +8,7 @@
 #include"\Users\lguillermont\source\repos\ConsoleApplication1 Encap/ENTITE.h"
 #include "\Users\lguillermont\source\repos\ConsoleApplication1 Encap/entite.cpp"
 #include "Entite2.h"
+#include "Abstraite.h"
 
 using namespace std;
 /*
@@ -51,14 +52,24 @@ int main(int argc, const char* argv[]) {
 	vector2.ToSetX(2.3);
 	vector2.ToSetY(4.3);
 	cout << vector2.ToGetX() << "\n" << vector2.ToGetY();
+	
+
+	Vector2 Pos;
+	Entite2 entite2(Pos);
+	entite2.SetPos(4.31, 15.96);
+	cout << entite2.ToString();
 	*/
 
-	Entite2 Entite2(4.31, 15.94);
-	Entite2.SetX(4.31);
-	Entite2.SetY(15.94);
-	cout << Entite2.ToGetX() << "\n" << Entite2.ToGetY();
+	Vector2 vec2;
+	Abstraite abs(vec2, 0);
+	abs.SetSpeed(5);
 
+	Vector2 new_direction(2.5, 1.3);
+	abs.Direction(new_direction);
 
+	abs.Deplacer(new_direction);
+	cout << abs.ToString() << endl;
+		
 
 	return 0;
 }

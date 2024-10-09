@@ -131,11 +131,13 @@
     <ClCompile Include="Alive.cpp" />
     <ClCompile Include="ConsoleApplication1 Encap.cpp" />
     <ClCompile Include="Entite2.cpp" />
+    <ClCompile Include="vecteur2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Abstraite.h" />
     <ClInclude Include="Alive.h" />
     <ClInclude Include="Entite2.h" />
+    <ClInclude Include="vecteur2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

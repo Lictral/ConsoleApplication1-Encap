@@ -1,19 +1,20 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "vecteur2.h"
 
 class Entite2{
 	public:
-		float x;
-		float y;
+		Vector2 pos;
 
-		Entite2(float i, float j);
+		Entite2(Vector2 position);
 
-		virtual float ToGetX();
-		virtual float ToGetY();
+		virtual Vector2 ToGetPos();
 
-		virtual void SetX(float i);
-		virtual void SetY(float j);
+		virtual void SetPos(float i, float j);
+
+		std::string ToString();
+
 
 };
 

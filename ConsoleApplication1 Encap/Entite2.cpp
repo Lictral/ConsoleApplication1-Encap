@@ -1,24 +1,29 @@
 #include "Entite2.h"
 #include <iostream>
+#include <sstream>
 
-Entite2::Entite2(float i, float j) {
-	x = i;
-	y = j;
+Entite2::Entite2(Vector2 position) : pos(position) {
+
 };
 
-float Entite2::ToGetX() {
-	return x;
+Vector2 Entite2::ToGetPos() {
+	return pos;
 };
 
-float Entite2::ToGetY() {
-	return y;
+
+
+void Entite2::SetPos(float i, float j) {
+	Vector2 position(i, j);
+	pos = position;
 };
 
-void Entite2::SetX(float i) {
-	x = i;
-};
+std::string Entite2::ToString() {
+	std::stringstream stream;
 
-void Entite2::SetY(float j) {
-	y = j;
-};
+	stream << "Point: \nx: " << pos.GetX() << " \ny: " << pos.GetY();
+
+	return stream.str();
+
+}
+
 
