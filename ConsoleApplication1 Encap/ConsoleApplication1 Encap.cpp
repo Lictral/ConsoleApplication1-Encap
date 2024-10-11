@@ -10,6 +10,9 @@
 #include "Entite2.h"
 #include "Abstraite.h"
 #include "Alive.h"
+#include "StaticObjet.h"
+#include "BreakableObject.h"
+#include "Mob.h"
 
 using namespace std;
 /*
@@ -70,7 +73,7 @@ int main(int argc, const char* argv[]) {
 
 	abs.Deplacer(new_direction);
 	cout << abs.ToString() << endl;
-	*/
+	
 
 	Alive alive(5);
 	alive.SetHpm(10);
@@ -79,6 +82,23 @@ int main(int argc, const char* argv[]) {
 
 	cout << alive.hp << endl;
 
+	StaticObjet stobj(1,2);
+	stobj.SetXY(7.2, 6.9);
+	cout << stobj.ToString() << endl;
+	
+
+	BreakableObject brobj(1, 2, 10);
+	brobj.Set_XY_HPM(5.3, 8.45, 10);
+	brobj.Damage(5);
+	cout << brobj.ToString() << endl;
+	*/
+	
+	Vector2 vec2(1.2, 3.6);
+	Vector2 new_dir(2.6, 8.6);
+	Mob mob(7.4, 5.6, 10, vec2);
+	cout << mob.ToString() << endl;
+	mob.Damage(5);
+	mob.Deplacer(new_dir);
 
 	return 0;
 }

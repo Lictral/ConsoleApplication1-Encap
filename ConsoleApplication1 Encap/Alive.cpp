@@ -5,6 +5,10 @@ Alive::Alive(float hp) {
 
 };
 
+float Alive::GetHpm() {
+	return Hpm;
+};
+
 float Alive::SetHpm(float Hpm) {
 	return Hpm;
 };
